@@ -28,6 +28,7 @@ a {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: rgb(39, 38, 38);
+  margin: 0 auto;
 }
 
 .container {
@@ -82,6 +83,15 @@ a {
   display: flex;
   justify-content: center;
   gap: 25px;
+}
+.bg__kurs-img {
+  margin-right: 20px;
+}
+
+.bg__kurs-usa, .bg__kurs-eur, .bg__kurs-pound, .bg__kurs-zl {
+  margin-bottom: 5px;
+  padding-left: 15px;
+  display: flex;
 }
 
 .bg__btns-btn {
@@ -140,7 +150,7 @@ a {
 .shipping__inner-europe {
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 50px;
 }
 .shipping__inner-usa {
@@ -149,7 +159,6 @@ a {
 }
 .shipping__usa-title {
   margin-bottom: 20px;
-  font-weight: 600;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -168,7 +177,6 @@ a {
 }
 .shipping__item-title {
   margin-bottom: 20px;
-  font-weight: 600;
   display: flex;
   align-items: center;
 }
@@ -184,7 +192,7 @@ a {
 }
 .shipping__usa {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 50px;
 }
 
@@ -197,12 +205,12 @@ a {
 
 .shipping__item:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .shipping__usa-item:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .ukr__inner {
@@ -216,7 +224,7 @@ a {
   margin-top: 20px;
   padding: 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 50px;
 }
 .ukr__warning {
@@ -252,7 +260,49 @@ a {
   margin: 20px auto 0;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .poltava__info-img {
   margin-right: 20px;
+}
+
+.title {
+  font-weight: 600;
+}
+
+.news__inner {
+  padding: 0 15px;
+}
+.news__title {
+  margin-bottom: 15px;
+  font-size: 25px;
+  text-align: center;
+}
+.news__cards {
+  display: flex;
+  gap: 30px;
+}
+.news__cards-card {
+  max-width: 250px;
+  border: 1px solid rgb(187, 184, 184);
+  text-align: center;
+}
+.news__cards-title {
+  margin: 25px 0;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+}
+.news__cards-text {
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+.news__cards-data {
+  font-size: 12px;
+  opacity: 0.7;
+}
+
+.bg__kurs-kurs {
+  max-width: 300px;
+  border: 2px solid rgb(187, 184, 184);
 }/*# sourceMappingURL=style.css.map */
