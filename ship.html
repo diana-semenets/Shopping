@@ -30,20 +30,20 @@
                         <ul class="shipping__item item-ship">
                             <li class="shipping__item-title"><img src="img/united-kingdom.png" alt="" width="50"><span class="shipping-title-text">Із Англії</span></li>
                             <li class="shipping__item-img"><img src="img/45880.png" alt="" width="80"></li>
-                            <li class="shipping__item-inner">4 тижні</li>
-                            <li class="shipping__item-inner"> £0.45 /100гр</li>
+                            <li class="shipping__item-inner">до 4х тижнів</li>
+                            <li class="shipping__item-inner"> <span class="pound">£ 0,45</span> /100гр  <span class="pound-grn"></span></li>
                         </ul>
                         <ul class="shipping__item item-ship">
                             <li class="shipping__item-title"><img src="img/germany.png" alt="" width="50"><span class="shipping-title-text">Із Іспанії та Німеччини</span><img src="img/spain.png" alt="" width="50"></li>
                             <li class="shipping__item-img"><img src="img/45880.png" alt="" width="80"></li>
-                            <li class="shipping__item-inner">4 тижні</li>
-                            <li class="shipping__item-inner"> €0.45 /100гр</li>
+                            <li class="shipping__item-inner">до 4х тижнів</li>
+                            <li class="shipping__item-inner "> €0.45 /100гр <span class="euro-grn"></span></li>
                         </ul>
                         <ul class="shipping__item item-ship">
                             <li class="shipping__item-title"><img src="img/poland.png" alt="" width="50"><span class="shipping-title-text">Із Польщі</span></li>
                             <li class="shipping__item-img"><img src="img/45880.png" alt="" width="80"></li>
-                            <li class="shipping__item-inner">3 тижні</li>
-                            <li class="shipping__item-inner"> 0.11 зл /100гр</li>
+                            <li class="shipping__item-inner">до 3х тижнів</li>
+                            <li class="shipping__item-inner "> 1.15 зл /100гр <span class="zlot-grn"></span></li>
                         </ul>
                     </div>
                     <div class="shipping__inner-usa">
@@ -53,14 +53,15 @@
                                 <div class="shipping__item-img"><img src="img/88732.png" alt="" width="80"></div>
                                 <ul class="shipping__item-usa">
                                     <li class="shipping__item-inner">6 тижнів</li>
-                                    <li class="shipping__item-inner">$0,8 /100гр</li>
+                                    <li class="shipping__item-inner">$0,8 /100гр </li>
+                                    <li class="shipping__item-inner"><span class="sea-grn"></span></li>
                                 </ul>
                             </div>                            
                         <div class="shipping__usa-item item-ship">
                             <div class="shipping__item-img"><img src="img/1247300.png" alt="" width="80"></div>
                             <ul class="shipping__item-usa">
                                 <li class="shipping__item-inner">3-4 тижнів</li>
-                                <li class="shipping__item-inner">$1,10 /100гр</li>
+                                <li class="shipping__item-inner">$1,10 /100гр <span class="air-grn"></span></li>
                             </ul>
                             </div>
                         </div>
@@ -104,8 +105,46 @@
                     </div>
                 </div>
             </section>
+
+            <section class="footer">
+                <div class="footer__inner">
+                    <div class="footer__contacts"><span> Контакти зі мною </span>
+                        <a href="viber://chat?number=%2B380679751016"> <img src="img/viber.svg" alt="" width="30"></a>  
+                        <a href="https://t.me/DianyUS"> <img src="img/telegram.svg" alt="" width="35"></a>
+                        
+                    </div>
+                </div>
+            </section >
         </div>
     </div>
     </div>
+    <script>
+        let pound = 0.45,
+            euro = 0.45,
+            zlot = 1.15,
+            sea = 0.8,
+            air = 1.10,
+            poundKurs = 47.20,
+            euroKurs = 41.00,
+            zlotKurs = 9.20,
+            dollKurs = 37.50,
+            poundGrn = document.querySelector('.pound-grn'),
+            euroGrn = document.querySelector('.euro-grn');
+            zlotGrn = document.querySelector('.zlot-grn');
+            seaGrn = document.querySelector('.sea-grn');
+            airGrn = document.querySelector('.air-grn');
+            
+
+        function getKurs () {             
+
+            poundGrn.innerHTML = `(${Math.round(pound * poundKurs)} грн/100гр)`;
+            euroGrn.innerHTML = ` (${Math.round(euro * euroKurs)} грн/100гр)`;
+            zlotGrn.innerHTML = ` (${Math.round(zlot * zlotKurs)} грн/100гр)`;
+            seaGrn.innerHTML = ` (${Math.round(sea * dollKurs)} грн/100гр)`;
+            airGrn.innerHTML = ` (${Math.round(air * dollKurs)} грн/100гр)`;
+        }
+        getKurs();
+
+    </script>
 </body>
 </html>
