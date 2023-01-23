@@ -24,7 +24,7 @@ a {
 
 .wrapper {
   max-width: 1400px;
-  height: inherit;
+  height: 100%;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   color: rgb(39, 38, 38);
@@ -32,7 +32,7 @@ a {
 }
 
 .container {
-  background: linear-gradient(153deg, rgba(234, 174, 238, 0.5) 0%, rgba(236, 105, 189, 0.2) 100%);
+  background: linear-gradient(153deg, rgba(234, 185, 238, 0.5) 0%, rgba(238, 124, 196, 0.2) 100%);
 }
 
 .header {
@@ -56,16 +56,13 @@ a {
 }
 
 .main {
-  margin-top: -80px;
-  height: inherit;
-  background: url(../img/banner-1\ 2.svg);
-  background-size: cover;
+  height: 100%;
 }
 
 .bg {
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 110px;
+  padding: 50px 15px 0;
 }
 .bg__inner {
   display: flex;
@@ -80,6 +77,7 @@ a {
   font-size: 24px;
 }
 .bg__inner-btns {
+  margin-bottom: 30px;
   display: flex;
   justify-content: center;
   gap: 25px;
@@ -118,6 +116,7 @@ a {
 
 .about__inner {
   max-width: 1000px;
+  height: 100%;
   margin: 110px auto 50px;
   padding: 0 15px;
   display: flex;
@@ -189,10 +188,11 @@ a {
 }
 .shipping-title-text {
   margin: 15px 0;
+  font-weight: 600;
 }
 .shipping__usa {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
   gap: 50px;
 }
 
@@ -211,6 +211,11 @@ a {
 .shipping__usa-item:hover {
   box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.8);
   transform: scale(1.05);
+}
+
+.pound-grn, .euro-grn, .zlot-grn, .sea-grn, .air-grn {
+  font-weight: 600;
+  margin-right: 20px;
 }
 
 .ukr__inner {
@@ -250,6 +255,7 @@ a {
 }
 
 .poltava__inner {
+  max-width: 1100px;
   margin: 50px auto;
   padding: 20px;
   box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.5);
@@ -305,4 +311,54 @@ a {
 .bg__kurs-kurs {
   max-width: 300px;
   border: 2px solid rgb(187, 184, 184);
+}
+
+.footer__inner {
+  margin-top: 50px;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  font-size: 25px;
+}
+
+@media (max-width: 990px) {
+  .bg__inner-img {
+    width: 500px;
+  }
+  .bg__inner-img img {
+    width: 500px;
+  }
+}
+@media (max-width: 799px) {
+  .bg__inner-img {
+    width: 350px;
+  }
+  .bg__inner-img img {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .wrapper {
+    max-width: 375px;
+  }
+  .bg__inner {
+    display: block;
+  }
+  .bg__inner-img {
+    display: none;
+  }
+  .about__inner {
+    display: block;
+  }
+  .about__img img {
+    width: 350px;
+  }
+  .news__cards {
+    justify-content: center;
+  }
+  .news__cards-card {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
