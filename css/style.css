@@ -375,7 +375,7 @@ a {
     right: 0;
     width: 100%;
     height: 100%;
-    background: #f5e0ed;
+    background: rgba(245, 224, 237, 0.6039215686);
     transform: translateX(100%);
     transition: transform 0.5s;
   }
