@@ -55,6 +55,9 @@ a {
 .main {
   height: 100%;
 }
+.main__inner {
+  margin: 30px 0;
+}
 
 .bg {
   max-width: 1100px;
@@ -319,6 +322,25 @@ a {
   justify-content: center;
   gap: 15px;
   font-size: 18px;
+}
+
+.shops__title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.shops__about {
+  padding: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  gap: 20px;
+}
+.shops__about-card {
+  display: flex;
+  gap: 15px;
+}
+.shops__usa {
+  margin: 30px 0;
 }
 
 @media (max-width: 990px) {
