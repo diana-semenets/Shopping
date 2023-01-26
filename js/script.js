@@ -1,4 +1,7 @@
+window.addEventListener('DOMContentLoaded', () => {
 
+let menuBtn = document.querySelector('.menu-btn');
+let menu = document.querySelector('.menu');
 
 function showDate () {
     let now = new Date();
@@ -11,14 +14,20 @@ function showDate () {
     span.innerHTML = `${date}.${month}`;     
 }
 
-let menuBtn = document.querySelector('.menu-btn');
-let menu = document.querySelector('.menu');
+
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('active');
 	menu.classList.toggle('active');
+    //document.body.style.overflow = 'hidden';
 })
+menu.addEventListener('click', (e) => {
+    if (e.target === menu) {
+        menu.classList.remove('active');;
+    }
+});
 
 
 
 showDate()
 
+});
