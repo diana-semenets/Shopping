@@ -3,6 +3,7 @@ window.addEventListener('DOMContentLoaded', () => {
 let menuBtn = document.querySelector('.menu-btn');
 let menu = document.querySelector('.menu');
 
+//---------------------//
 function showDate () {
     let now = new Date();
   
@@ -13,20 +14,22 @@ function showDate () {
      
     span.innerHTML = `${date}.${month}`;     
 }
-
+//---------------------//
 
 menuBtn.addEventListener('click', function(){
 	menuBtn.classList.toggle('active');
 	menu.classList.toggle('active');
-    //document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
 })
 menu.addEventListener('click', (e) => {
-    if (e.target === menu) {
-        menu.classList.remove('active');;
+    if (e.target === menu ) {
+        menu.classList.remove('active');
+        menuBtn.classList.remove('active');  
+        document.body.style.overflow = '';      
     }
 });
 
-
+//---------------------//
 
 showDate()
 
