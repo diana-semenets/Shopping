@@ -349,10 +349,11 @@ a {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+  justify-items: center;
 }
 .shops__about-card {
   width: 200px;
-  height: 200px;
+  height: 180px;
   background: #fff;
   border-radius: 15px;
   position: relative;
@@ -374,6 +375,10 @@ a {
 .shops__info-shop {
   margin-top: 10px;
   font-weight: 600;
+  font-size: 20px;
+}
+.shops__info-shop a {
+  color: rgb(153, 68, 153);
 }
 
 .hidden {
