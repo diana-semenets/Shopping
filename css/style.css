@@ -329,18 +329,63 @@ a {
   margin-bottom: 20px;
   font-size: 25px;
 }
+.shops__info-img {
+  height: 130px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.shops__info-img img {
+  width: 150px;
+  display: block;
+}
 .shops__about {
   padding: 15px;
+  background: linear-gradient(153deg, rgba(234, 185, 238, 0.5) 0%, rgba(238, 124, 196, 0.2) 100%);
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
 }
 .shops__about-card {
-  display: flex;
-  gap: 15px;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
 }
 .shops__usa {
   margin: 30px 0;
+}
+
+.shops__info-list {
+  max-width: 200px;
+  padding: 0 10px;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  font-size: 14px;
+}
+
+.shops__about-card:hover .shops__info-list {
+  display: block;
+}
+
+.shops__info-shop {
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.hidden {
+  display: none;
+}
+
+.open {
+  display: block;
 }
 
 @media (max-width: 990px) {
@@ -351,7 +396,7 @@ a {
     width: 500px;
   }
 }
-@media (max-width: 799px) {
+@media (max-width: 767px) {
   .bg__inner-img {
     width: 350px;
   }
