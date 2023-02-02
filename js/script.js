@@ -19,7 +19,7 @@ menu.addEventListener('click', (e) => {
 
 //---------------------//
 
-class MenuCard {
+/*class MenuCard {
     constructor(src, descrFirst, descrSecond, descrThird, parentSelector) {
         
         this.src = src;
@@ -33,12 +33,12 @@ class MenuCard {
         const element = document.createElement('div');
         element.innerHTML = `
             <div class="shops__about-card">
-                <div class="shops__info-img"><img src=${this.src} alt="" width="100"></div>
+                <div class="shops__info-img"><img src=${this.src} alt=""></div>
                 <div class="shops__about-info">                                
                     <div class="shops__info-text">
-                        <ul>
-                            <li>${this.descrFirst}.</li>
-                            <li>${this.descrSecond}.</li>
+                        <ul class="shops__info-list" id="items">
+                            <li class="shops__info-item">${this.descrFirst}.</li>
+                            <li class="shops__info-item">${this.descrSecond}.</li>
                             <li>${this.descrThird}.</li>
                         </ul>
                     </div>
@@ -94,9 +94,10 @@ new MenuCard (
     'Доступний ціновий діапазон, знаходиться в сегменті «Mass market»',
     'Спеціалізується на виробництві одягу для жінок, чоловіків і дітей.',
     '.shops__about'
-).render();
+).render(); */
 //---------------------//
 
+  
 
 
 });
