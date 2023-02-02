@@ -371,10 +371,6 @@ a {
   font-size: 14px;
 }
 
-.shops__about-card:hover .shops__info-list {
-  display: block;
-}
-
 .shops__info-shop {
   margin-top: 10px;
   font-weight: 600;
