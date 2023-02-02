@@ -109,19 +109,19 @@
         showDate()
 //--------------------//
 
-class MenuNewsCard {
-    constructor(src, title, description, data, parentSelector) {
+        class MenuNewsCard {
+            constructor(src, title, description, data, parentSelector) {
         
-        this.src = src;
-        this.title = title;
-        this.description = description;    
-        this.data = data; 
-        this.parent = document.querySelector(parentSelector);      
-    }
+                this.src = src;
+                this.title = title;
+                this.description = description;    
+                this.data = data; 
+                this.parent = document.querySelector(parentSelector);      
+            }
   
-    render() {
-        const element = document.createElement('div');
-        element.innerHTML = `
+        render() {
+            const element = document.createElement('div');
+            element.innerHTML = `
             <div class="news__cards-card">
                 <img class="news__cards-img" src=${this.src} alt="" width="248">
                 <div class="news__cards-title">${this.title}</div>
@@ -129,24 +129,24 @@ class MenuNewsCard {
                 <div class="news__cards-data">${this.data}</div>
             </div>
         `;
-    this.parent.append(element);
-    }
-}
-new MenuNewsCard (
-    "img/h-m.svg",
-    'H&M Англія',
-    'Додаткова знижка від цін сайту -15% !!!  Акція до 30.01',
-    '27.01',
-    '.news__cards'
-).render();
+        this.parent.append(element);
+        }
+        }
+        new MenuNewsCard (
+            "img/h-m.svg",
+            'H&M Англія',
+            'Додаткова знижка від цін сайту -15% !!!  Акція до 30.01',
+            '27.01',
+            '.news__cards'
+        ).render();
 
-new MenuNewsCard (
-    "img/inditex.png",
-    'SALE!!! ZARA, Bershka, MD',
-    'У групі компаній мережі INDITEX стартував піврічний розпродаж',
-    '06.01',
-    '.news__cards'
-).render();
+        new MenuNewsCard (
+            "img/inditex.png",
+            'SALE!!! ZARA, Bershka, MD',
+            'У групі компаній мережі INDITEX стартував піврічний розпродаж',
+            '06.01',
+            '.news__cards'
+        ).render();
 
     </script>
 </body>
