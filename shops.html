@@ -152,7 +152,38 @@
                                         <li>Американський будинок моди.</li>
                                         <li>Бренд уособлює сексуальність, що підкреслює неповторний стиль та бездоганний смак.</li>
                                         <li>Представлені чоловічі, жіночі, а також дитячі колекції.</li>
-                                        <li class="shops__info-shop"><a href="https://www.calvinklein.us/en">Calvin Klein</a></li>                                        
+                                        <li class="shops__info-shop"><a href="https://www.calvinklein.us/en">Calvin Klein</a></li> 
+                                        <li class="shops__info-shop"><a href="https://www.calvinklein.lt/size-guide">Розмірна сітка</a></li>                                       
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="shops__about-card">
+                            <div class="shops__info-img"><img src="img/Puma.svg" alt=""></div>
+                            <div class="shops__about-info">                                
+                                <div class="shops__info-text" >
+                                    <ul class="shops__info-list hidden" id="items">
+                                        <li>Один із світових лідерів виробництва спортивних товарів.</li>
+                                        <li>Бренд проводить регулярні акції та розпродажі.</li>
+                                        <li>Представлені спортивні чоловічі, жіночі, а також дитячі колекції.</li>
+                                        <li class="shops__info-shop"><a href="https://us.puma.com/us/en">PUMA</a></li>                                        
+                                        <li class="shops__info-shop"><a href="https://ua.puma.com/uk/size-guide.html">Розмірна сітка</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> 
+
+                        <div class="shops__about-card">
+                            <div class="shops__info-img"><img src="img/Victorias-Secret.png" alt=""></div>
+                            <div class="shops__about-info">                                
+                                <div class="shops__info-text" >
+                                    <ul class="shops__info-list hidden" id="items">
+                                        <li>Компанія з продажу жіночої білизни.</li>
+                                        <li>Крім того, має в асортименті жіночий одяг, взуття, аксесуари, парфумерію, косметику і купальники Victoria's Secret.</li>
+                                        <li>Є окрема серія для молоді "PINK"</li>
+                                        <li class="shops__info-shop"><a href="https://www.victoriassecret.com/us/">Victoria's Secret</a></li>                                        
+                                        <li class="shops__info-shop"><a href="">Розмірна сітка</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -176,22 +207,15 @@
     </div>
     <script>
 
-        let spoiller = document.querySelectorAll('#items');
-        let card = document.querySelectorAll('.shops__about-card');
+        let spoillers = document.querySelectorAll('#items');
+        let cards = document.querySelectorAll('.shops__about-card');
 
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener('click', () => {
+            spoillers[i].classList.toggle('hidden');
 
-        for (let i = 0; i < card.length; i++) {
-            card[i].addEventListener('click', () => {
-            spoiller[i].classList.toggle('hidden');
-           
         });        
         }
-
-        
-        
-        
-
-       
 
     </script>
     <script src="js/script.js"></script>    
