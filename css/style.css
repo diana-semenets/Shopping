@@ -37,7 +37,7 @@ a {
 
 .header {
   max-width: 1100px;
-  margin: 15px 0 0 0;
+  margin: 15px 5px 0 0;
   padding: 20px 0;
   text-align: end;
 }
@@ -363,10 +363,11 @@ a {
 }
 
 .shops__info-list {
-  max-width: 200px;
-  padding: 0 10px;
+  max-width: 250px;
+  padding: 0 10px 10px;
   position: absolute;
   background-color: #fff;
+  border-radius: 15px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   font-size: 14px;
@@ -378,7 +379,10 @@ a {
   font-size: 20px;
 }
 .shops__info-shop a {
+  padding: 2px;
   color: rgb(153, 68, 153);
+  border-radius: 20px;
+  border: 1px solid rgb(201, 199, 199);
 }
 
 .hidden {
@@ -495,5 +499,15 @@ a {
   }
   .news__cards-card {
     display: none;
+  }
+  .shops__about {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  .shops__about-card {
+    width: 160px;
+    height: 150px;
+  }
+  .shops__info-list {
+    width: 170px;
   }
 }/*# sourceMappingURL=style.css.map */
