@@ -514,7 +514,15 @@ a {
     padding: 30px 15px 0;
   }
   .bg__inner {
+    padding: 20px;
     display: block;
+  }
+  .bg__inner-title {
+    font-size: 20px;
+  }
+  .bg__inner-text {
+    margin: 25px 0;
+    font-size: 18px;
   }
   .about__inner {
     max-width: 499px;
