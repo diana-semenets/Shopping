@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping</title>
+    <title>Shopping Online</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -24,7 +24,8 @@
                 <li class="header__nav-item">Про мене</li>
                 <li class="header__nav-item"><a href="ship.html">Доставка</a></li>
                 <li class="header__nav-item"><a href="shops.html">Магазини</a></li>
-                <li class="header__nav-item">Замовлення</li>
+                <li class="header__nav-item"><a href="order.html">Замовлення</a></li>
+                <li class="header__nav-item">Запитання</li>
             </ul>
         </div>
         </header>
@@ -34,14 +35,27 @@
                 <div class="bg__inner">                    
                     <div class="bg__inner-info">
                     <div class="bg__inner-title">Сервіс викупу товарів з онлайн-магазинів Америки та Європи</div>
-                    <div class="bg__inner-text">Викупаю товари із більш ніж 50 магазинів.</div>
+                    <div class="bg__inner-text">Почніть заощаджувати до 80% на шопінгу. Купуйте зі знижками в Америці та Європі одяг, взуття, гаджети відомих брендів.</div>
                     <div class="bg__inner-btns">
                         <div class="bg__btns-btn btn"><a href="shops.html#europe">Магазини Європи</a></div>
                         <div class="bg__btns-btn btn"><a href="shops.html#usa">Магазини Америки</a></div>
                     </div>
                     </div>
-                    <div class="bg__inner-img"><img src="img/Group 1.svg" alt="" width="700"></div>
+                    <div class="bg__inner-img"><img src="img/main.svg" alt=""></div>
                 </div>
+            </section>
+
+            <section class="things">
+                <div class="things__inner">
+                    <div class="things__inner-title">Що можливо купити?</div>
+                    <div class="things__cards">
+    <!---               <div class="things__card">
+                            <div class="things__card-img"><img src="img/about/clothes.svg" alt=""></div>
+                            <div class="things__card-text">Одяг</div>
+                        </div> -->
+                    </div>
+                </div>  
+
             </section>
 
             <section class="about">
@@ -84,7 +98,7 @@
 
             <section class="footer">
                 <div class="footer__inner">
-                    <div class="footer__contacts"><span> Контакти </span>
+                    <div class="footer__contacts"><span> Залишились питання? Запитай </span>
                         <a href="viber://chat?number=%2B380679751016"> <img src="img/viber.svg" alt="" width="30"></a>  
                         <a href="https://t.me/DianyUS"> <img src="img/telegram.svg" alt="" width="35"></a>
                         <a href="https://www.instagram.com/buyer.diana/?igshid=NDk5N2NIZjQ%3D"> <img src="img/instagram.svg" alt="" width="30"></a>
@@ -146,6 +160,62 @@
             'У групі компаній мережі INDITEX стартував піврічний розпродаж',
             '06.01',
             '.news__cards'
+        ).render();
+
+//--------------------//
+
+        class MenuThingsCard {
+            constructor(src, title, parentSelector) {
+        
+                this.src = src;
+                this.title = title;
+                this.parent = document.querySelector(parentSelector);      
+            }
+            render() {
+            const element = document.createElement('div');
+            element.innerHTML = `
+            <div class="things__card">
+                <div class="things__card-img"><img src=${this.src} alt=""></div>
+                <div class="things__card-text">${this.title}</div>
+            </div>
+        `;
+        this.parent.append(element);
+        }
+        }
+        new MenuThingsCard (
+            "img/about/clothes.svg",
+            'Одяг',
+            '.things__cards'
+        ).render();
+
+        new MenuThingsCard (
+            "img/about/gadget.svg",
+            'Гаджети',
+            '.things__cards'
+        ).render();
+
+        new MenuThingsCard (
+            "img/about/acess.svg",
+            'Аксесуари',
+            '.things__cards'
+        ).render();
+
+        new MenuThingsCard (
+            "img/about/child.svg",
+            'Товари для дітей',
+            '.things__cards'
+        ).render();
+
+        new MenuThingsCard (
+            "img/about/sport.svg",
+            'Товари для спорта',
+            '.things__cards'
+        ).render();
+
+        new MenuThingsCard (
+            "img/about/Cosmetics.svg",
+            'Косметика',
+            '.things__cards'
         ).render();
 
     </script>
