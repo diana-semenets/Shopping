@@ -83,7 +83,7 @@
                                 <div class="bg__kurs-eur"><img class="bg__kurs-img" src="img/euro.png" alt="" width="30"><span>40,40</span></div>
                                 <div class="bg__kurs-pound"><img class="bg__kurs-img" src="img/united-kingdom.png" alt="" width="30"><span id="poundKurs">46,50</span></div>
                                 <div class="bg__kurs-zl"><img class="bg__kurs-img" src="img/poland.png" alt="" width="30"><span>9,30</span></div>
-                                <div class="news__cards-data">21.01</div>
+                                <div class="bg__kurs-data">21.01</div>
                             </div>
                         </div>
  <!---                  <div class="news__cards-card">
@@ -113,7 +113,7 @@
         function showDate () {
             let now = new Date();
   
-            let span = document.querySelector(".news__cards-data");
+            let span = document.querySelector(".bg__kurs-data");
             let date = now.getDate();               
             let months = ["01","02","03","04","05","06","07","08","09","10","11","12"];
             let month = months[now.getMonth()];
