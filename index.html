@@ -73,10 +73,16 @@
 
             <section class="news">
                 <div class="news__inner">
-                    <div class="news__title">Акції</div>
-                    <div class="news__cards">
-                        <div class="bg__kurs">
-                            <div class="bg__kurs-kurs">
+                    <div class="news__title-buttons">
+                        <div class="news__title">Акції</div>
+                        <div class="news__buttons">
+                            <div ><button class="prev-btn" >&#60;</button></div>
+                            <div ><button class="next-btn" id="slider-left">&#62;</button></div>
+                        </div>
+                    </div>
+                    <div class="news__cards" id="slider">
+                        <div class="bg__kurs banner-inner">
+                            <div class="bg__kurs-kurs news__cards-card">
                                 <img class="news__cards-img" src="img/pb.png" alt="" width="248">
                                 <div class="news__cards-title">Курс валют</div>
                                 <div class="bg__kurs-usa"><img class="bg__kurs-img" src="img/united-states.png" alt="" width="30"><span>37,50</span></div>
@@ -94,6 +100,7 @@
                         </div> --->
                     </div>
                 </div>
+                
             </section>
 
             <section class="footer">
@@ -121,6 +128,25 @@
             span.innerHTML = `${date}.${month}.2023`;     
         }
         showDate()
+
+//--------------------//
+
+        let sliderLeftBtn = document.querySelector('#slider-left');
+        //let sliderContainer = document.querySelector('.slider__container').offsetWidth;
+        let left = 0;
+        let slider = document.querySelector('#slider');
+
+        sliderLeftBtn.addEventListener('click', function() {
+            
+            left = left - 280;
+            if (left < -840) {
+                left = 0;
+            }
+            slider.style.left = left + 'px';
+            
+        })
+
+        
 //--------------------//
 
         class MenuNewsCard {
@@ -136,7 +162,7 @@
         render() {
             const element = document.createElement('div');
             element.innerHTML = `
-            <div class="news__cards-card">
+            <div class="news__cards-card banner-inner">
                 <img class="news__cards-img" src=${this.src} alt="" width="248">
                 <div class="news__cards-title">${this.title}</div>
                 <div class="news__cards-text">${this.description}</div>
