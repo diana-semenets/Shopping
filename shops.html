@@ -204,6 +204,36 @@
                                 </div>
                             </div>
                         </div>
+
+                        <div class="shops__about-card">
+                            <div class="shops__info-img"><img src="img/the-childrens-place.svg" alt="carters"></div>
+                            <div class="shops__about-info">                                
+                                <div class="shops__info-text" >
+                                    <ul class="shops__info-list hidden" id="items">
+                                        <li>Популярний американський магазин.</li>
+                                        <li>Спеціалізується на дитячому одязі (від 0 до 18 років).</li>
+                                        <li>Виділяється низьким рівнем цін при високій якості.</li>
+                                        <li class="shops__info-shop"><a href="https://www.childrensplace.com/us/home">Children's Place</a></li>                                        
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="shops__about-card">
+                            <div class="shops__info-img"><img src="img/ugg-australia.svg" alt="carters"></div>
+                            <div class="shops__about-info">                                
+                                <div class="shops__info-text" >
+                                    <ul class="shops__info-list hidden" id="items">
+                                        <li>Це бренд взуття та одягу.</li>
+                                        <li>Відомий класичними чоботами з баранячої шкіри.</li>
+                                        <li>Бараняча шкіра двостороння, замшева ззовні та із баранячою шерстю зсередини. Зберігає ступні ніг холодними влітку та теплими взимку.</li>
+                                        <li class="shops__info-shop"><a href="https://www.ugg.com/">UGG</a></li>                                        
+                                        <li class="shops__info-shop"><a href="https://www.ugg.com/sizing-information.html">Розмірна сітка</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
@@ -226,12 +256,13 @@
         let cards = document.querySelectorAll('.shops__about-card');
 
         for (let i = 0; i < cards.length; i++) {
-            cards[i].addEventListener('click', () => {
-            spoillers[i].classList.toggle('hidden');
-
+            cards[i].addEventListener('click', (event) => {
+                const target = event.target;
+                spoillers[i].classList.toggle('hidden');
         });        
-        }
+        }  
 
+   
     </script>
     <script src="js/script.js"></script>    
 </body>
