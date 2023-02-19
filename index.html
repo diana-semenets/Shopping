@@ -76,7 +76,7 @@
                     <div class="news__title-buttons">
                         <div class="news__title">Акції</div>
                         <div class="news__buttons">
-                            <div ><button class="prev-btn" >&#60;</button></div>
+                            <div ><button class="prev-btn" id="slider-right">&#60;</button></div>
                             <div ><button class="next-btn" id="slider-left">&#62;</button></div>
                         </div>
                     </div>
@@ -132,9 +132,14 @@
 //--------------------//
 
         let sliderLeftBtn = document.querySelector('#slider-left');
-        //let sliderContainer = document.querySelector('.slider__container').offsetWidth;
+        let sliderRightBtn = document.querySelector('#slider-right');
         let left = 0;
+        //let sliderContainer = document.querySelector('.slider__container').offsetWidth;
+        
         let slider = document.querySelector('#slider');
+        let startX;
+        let endX;
+
 
         sliderLeftBtn.addEventListener('click', function() {
             
@@ -142,11 +147,48 @@
             if (left < -840) {
                 left = 0;
             }
+            slider.style.left = left + 'px';            
+        });
+
+        sliderRightBtn.addEventListener('click', function() {
+            //left = -840;
+            left = left + 280;
+            if (left > 0) {
+                left = 0;
+            } 
             slider.style.left = left + 'px';
+
+        })
+
+        slider.addEventListener('touchstart', e => {
+            console.log('touchstart', e.touches[0].clientX);
+            startX = e.touches[0].clientX;
+        })
+        slider.addEventListener('touchmove', e => {
+            console.log('touchmovet', e.touches[0].clientX);
+            endX = e.touches[0].clientX;
+        })
+
+
+        slider.addEventListener('touchend', e => {
+            if (startX > endX) {
+                left = left - 280;
+                if (left < -840) {
+                    left = 0;
+                }
+                slider.style.left = left + 'px';   
+            } else {
+                left = left + 280;
+            if (left > 0) {
+                left = 0;
+            } 
+            slider.style.left = left + 'px';
+            }
             
         })
 
-        
+
+
 //--------------------//
 
         class MenuNewsCard {
