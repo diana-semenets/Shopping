@@ -36,7 +36,7 @@
                     
                     <div class="tabs">
                         <div class="tab">
-                            <div class="general-title">Загальні запитання</div>
+                            <div class="general-title"> Загальні запитання</div>
                             <input type="radio" id="rd1" name="rd">
                             <label class="tab-label" for="rd1">Чи є канал з анонсами?</label>
                             <div class="tab-content">Звичайно. Канал з анонсами в Viber.</div>
@@ -92,5 +92,22 @@
         </main>
     </div>
     <script src="js/script.js"></script>
+    <script>
+
+        let tabLabel = document.querySelectorAll('.tab-label');
+        let tabContent = document.querySelectorAll('.tab-content');
+
+        for (let i = 0; i < tabLabel.length; i++) {
+            tabLabel[i].addEventListener('click', (event) => {
+                const target = event.target;
+                tabContent[i].classList.toggle('hidden');
+        });        
+        }  
+
+        //------------------//
+
+
+
+    </script>
 </body>
 </html>
