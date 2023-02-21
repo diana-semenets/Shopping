@@ -76,6 +76,7 @@
                             <label class="tab-label" for="rd7">Як довго чекати замовлення?</label>
                             <div class="tab-content">Замовлення доставляється від 3х до 6ти тижнів. Досладніше <a href="ship.html"> тут</a></div>
                         </div>
+
                     </div>
                     </section>
                 
@@ -96,13 +97,66 @@
 
         let tabLabel = document.querySelectorAll('.tab-label');
         let tabContent = document.querySelectorAll('.tab-content');
+        
+        let tabs = document.querySelectorAll('.tab');
+        let tabsParent = document.querySelector('.tabs');
 
-        for (let i = 0; i < tabLabel.length; i++) {
-            tabLabel[i].addEventListener('click', (event) => {
+        for (let i = 0; i < tabs.length; i++) {
+            tabs[i].addEventListener('click', (event) => {
                 const target = event.target;
-                tabContent[i].classList.toggle('hidden');
-        });        
+                tabs[i].classList.add('active'); 
+                
+                if(target == tabLabel[i]) {
+                    tabs.forEach(item => {
+                    item.classList.remove('active');
+                    });
+                }
+           
+
+            });        
         }  
+
+        
+
+
+ 
+
+
+  //     function hideTabContent() {
+   //     tabs.forEach(item => {
+            //    item.style.display = 'none';
+            //item.classList.add('hidden');
+   //         item.classList.remove('active');
+     //   })}
+
+
+    /*    tabs.forEach(item => {
+    //        item.classList.remove('active');
+    //    });
+    }
+
+    function showTabContent(i = 0) {
+        //   tabsContent[i].style.display = 'block';
+        tabs[i].classList.add('active');
+        //tabContent[i].classList.remove('hidden');
+       // tabs[i].classList.add('active');
+    }
+
+    hideTabContent();
+    showTabContent();
+
+    tabsParent.addEventListener('click', (event) => {
+        const target = event.target;
+
+        if( target && target.classList.contains('tab')) {
+            tabs.forEach((item, i) => {
+                if(target == item) {
+                    hideTabContent();
+                    //showTabContent(i);
+                }
+            });
+        }
+    });  */
 
         //------------------//
 
