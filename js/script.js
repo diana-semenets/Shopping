@@ -11,19 +11,62 @@ menuBtn.addEventListener('click', function(){
     //document.body.style.overflow = 'hidden';
 
    if (menuBtn.classList.contains('active')) {
-    document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden';
    }else {
-    document.body.style.overflow = '';
+        document.body.style.overflow = '';
    }
 })
+
 menu.addEventListener('click', (e) => {
     if (e.target === menu) {
         menu.classList.remove('active');
         menuBtn.classList.remove('active');  
-        document.body.style.overflow = '';   
-           
+        document.body.style.overflow = '';              
     }
 });
+
+//---------------------//
+
+let dollarShow = document.querySelector(".kurs-usa");
+let euroShow = document.querySelector(".kurs-euro");
+let poundShow = document.querySelector(".kurs-pound");
+let zlShow = document.querySelector(".kurs-zl");
+
+function show (event) {
+    //event.preventDefault(); 
+
+    let apiUrl = `https://api.monobank.ua/bank/currency`;
+
+    axios.get(apiUrl)
+    .then(function (response) {
+
+      
+      let dataDollar = response.data[0];
+      let dataEuro = response.data[1];
+      let dataPound = response.data[3];
+      let dataZl = response.data[82];
+
+      let dollar = dataDollar.rateSell;
+      let euro = dataEuro.rateSell;
+      let pound = dataPound.rateCross;
+      let zl = dataZl.rateCross;
+
+      console.log(euro);
+      console.log(pound);
+      console.log(zl);
+      console.log(dollar*1.002);
+
+      dollarShow.innerHTML = (dollar*1.002).toFixed(2);
+      euroShow.innerHTML = (euro*1.002).toFixed(2);
+      poundShow.innerHTML = (pound+1).toFixed(2);
+      zlShow.innerHTML = (zl*1.08).toFixed(2);
+
+      console.log(response.data);
+    });
+}
+show()
+
+
 
 
 
