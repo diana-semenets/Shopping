@@ -7,6 +7,7 @@
     <title>Shopping Online</title>
 
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="wrapper">
@@ -85,10 +86,10 @@
                             <div class="bg__kurs-kurs news__cards-card">
                                 <img class="news__cards-img" src="img/pb.png" alt="" width="248">
                                 <div class="news__cards-title">Курс валют</div>
-                                <div class="bg__kurs-usa"><img class="bg__kurs-img" src="img/united-states.png" alt="" width="30"><span>37,50</span></div>
-                                <div class="bg__kurs-eur"><img class="bg__kurs-img" src="img/euro.png" alt="" width="30"><span>40,85</span></div>
-                                <div class="bg__kurs-pound"><img class="bg__kurs-img" src="img/united-kingdom.png" alt="" width="30"><span id="poundKurs">47.00</span></div>
-                                <div class="bg__kurs-zl"><img class="bg__kurs-img" src="img/poland.png" alt="" width="30"><span>9,30</span></div>
+                                <div class="bg__kurs-usa"><img class="bg__kurs-img" src="img/united-states.png" alt="" width="30"><span class="kurs-usa">37,50</span></div>
+                                <div class="bg__kurs-eur"><img class="bg__kurs-img" src="img/euro.png" alt="" width="30"><span class="kurs-euro">40,65</span></div>
+                                <div class="bg__kurs-pound"><img class="bg__kurs-img" src="img/united-kingdom.png" alt="" width="30"><span id="poundKurs" class="kurs-pound">47,00</span></div>
+                                <div class="bg__kurs-zl"><img class="bg__kurs-img" src="img/poland.png" alt="" width="30"><span class="kurs-zl">9,30</span></div>
                                 <div class="bg__kurs-data">21.01</div>
                             </div>
                         </div>
@@ -221,7 +222,6 @@
             '13.03.2023',
             '.news__cards'
         ).render();
-        
         new MenuNewsCard (
             "img/puma1.png",
             'PUMA Америка',
@@ -245,6 +245,9 @@
             '06.01.2023',
             '.news__cards'
         ).render();
+
+//--------------------//
+
 
 //--------------------//
 
