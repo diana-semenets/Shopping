@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,500italic,600,600italic,700,700italic,800,900);
+@import url(https://fonts.googleapis.com/css?family=Poppins:regular,500,600,700,800,900);
 html,
 body {
   box-sizing: border-box;
@@ -69,6 +69,10 @@ a {
 }
 .bg__inner-info {
   max-width: 550px;
+  animation-name: bg;
+  animation-duration: 1s;
+  animation-timing-function: ease;
+  position: relative;
 }
 .bg__inner-title {
   font-size: 30px;
@@ -603,6 +607,61 @@ input:checked + .tab-label::after {
 
 .tab:not(.active) .tab-content {
   display: none;
+}
+
+@keyframes bg {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+.first {
+  animation-name: first;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  position: relative;
+}
+
+@keyframes first {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 0%;
+  }
+}
+.second {
+  animation-name: first;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 2s;
+  position: relative;
+}
+
+.third {
+  animation-name: first;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 4s;
+  position: relative;
+}
+
+.fourth {
+  animation-name: first;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-delay: 6s;
+  position: relative;
+}
+
+.fifth {
+  animation-name: first;
+  animation-delay: 8s;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  position: relative;
 }
 
 @media (max-width: 990px) {
